@@ -109,7 +109,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
    然后使用 
    ```javascript
    this.$refs.myRef.finishPullToRefresh(); //告诉插件我刷新完了 
-   ```
+   #上面这句可用参数里传入的函数代替
+   done()
+   ```
    
    这个下拉加载更坑 因为页面加载初始化会触发上拉动作 所以你还要给他个开关 防止他一上来就加载 影响逻辑  
    先给定一个 初始化变量  
