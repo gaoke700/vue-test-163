@@ -107,11 +107,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
    这个鬼东西  数据加载完成 他还不知道  我勒个擦 你得去告诉他完成了 不然那个刷新的菊花标志一直转呀转  
    要告诉它 在组件里使用 ref="myRef" 属性引用插件对象实例  
    然后使用 
-   ```javascript
+```javascript
    this.$refs.myRef.finishPullToRefresh(); //告诉插件我刷新完了 
-   #上面这句可用参数里传入的函数代替
+   //上面这句可用参数里传入的函数代替
    done()
-   ```
+```
    
    这个下拉加载更坑 因为页面加载初始化会触发上拉动作 所以你还要给他个开关 防止他一上来就加载 影响逻辑  
    先给定一个 初始化变量  
