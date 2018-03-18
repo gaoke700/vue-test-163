@@ -234,7 +234,7 @@ export default {
     )
   },
   methods: {
-    pullDownFresh(){
+    pullDownFresh(done){
       // console.log(1)
       this.getRefreshKey();
       this.$jsonp('http://3g.163.com/touch/jsonp/sy/recommend/0-9.html',{
@@ -255,7 +255,9 @@ export default {
         })
 
         // console.log(this.$refs.myRef)  //通过ref属性引用插件对象实例
-        this.$refs.myRef.finishPullToRefresh(); //告诉插件我刷新完了
+        // this.$refs.myRef.finishPullToRefresh(); //告诉插件我刷新完了
+        //上面这句可以用传入的done函数代替
+        done();
         this.$vux.toast.text(`刷新了${this.dataList2.length}条数据`,'top')
       })
     },
